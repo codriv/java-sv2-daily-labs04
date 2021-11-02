@@ -25,7 +25,7 @@ public class Movie {
         int actors20 = 0;
         for (Actor actor: list) {
             int year20 = year - actor.getYear();
-            if (20 < year20 && year20 < 30) {
+            if (20 <= year20 && year20 < 30) {
                 actors20++;
             }
         }
