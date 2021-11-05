@@ -10,18 +10,12 @@ public class Stock {
     }
 
     public double maxProfit() {
-        double maxProfit = 0d;
+        double maxProfit = 0;
         for (int i = 0; i < price.size(); i++) {
-            double currentMaxProfit = 0d;
-            int indexOfMax = i;
-            for (int j = i; j < price.size(); j++) {
-                if (price.get(j) > price.get(indexOfMax)) {
-                    indexOfMax = j;
+            for (int j = i + 1; j < price.size(); j++) {
+                if (price.get(j) - price.get(i) > maxProfit) {
+                    maxProfit = (price.get(j) - price.get(i));
                 }
-            }
-            currentMaxProfit = price.get(indexOfMax) - price.get(i);
-            if (currentMaxProfit > maxProfit) {
-                maxProfit = currentMaxProfit;
             }
         }
         return maxProfit;
