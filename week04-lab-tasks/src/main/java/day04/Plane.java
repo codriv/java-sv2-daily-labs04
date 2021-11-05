@@ -10,9 +10,9 @@ public class Plane {
         this.maxCapacity = maxCapacity;
     }
 
-    public boolean addPassenger(Passenger passanger) {
+    public boolean addPassenger(Passenger passenger) {
         if (passengerList.size() < maxCapacity) {
-            passengerList.add(passanger);
+            passengerList.add(passenger);
         } else {
             return false;
         }
